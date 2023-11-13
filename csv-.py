@@ -21,3 +21,41 @@ datos = [["Nombre", "Apellido", "Edad"], ["Ana", "Sevilla", "20"]]
 with open ('nombres.csv', 'w') as csv_file:
     writer = csv.write(csv_file)
     writer.writerowsw(datos)
+
+
+def read_csv(file_path):
+    """
+    Read data from a CSV file and return a DataFrame.
+
+    Parameters:
+    - file_path (str): Path to the CSV file.
+
+    Returns:
+    - pd.DataFrame: DataFrame containing the data from the CSV file.
+    """
+    return pd.read_csv(file_path)
+
+def write_csv(data_frame, file_path, index=False):
+    """
+    Write data to a CSV file.
+
+    Parameters:
+    - data_frame (pd.DataFrame): DataFrame to be written to the CSV file.
+    - file_path (str): Path to the CSV file.
+    - index (bool): Whether to include row indices. Default is False.
+    """
+    data_frame.to_csv(file_path, index=index)
+
+def manipulate_csv(data_frame):
+    """
+    Perform some data manipulation on the CSV data.
+
+    Parameters:
+    - data_frame (pd.DataFrame): Input DataFrame.
+
+    Returns:
+    - pd.DataFrame: Manipulated DataFrame.
+    """
+    # Your data manipulation logic here
+    manipulated_data = data_frame  # Placeholder, replace with actual manipulation
+    return manipulated_data
