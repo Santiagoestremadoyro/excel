@@ -59,5 +59,3 @@ def manipulate_csv(data_frame):
     # Your data manipulation logic here
     manipulated_data = data_frame  # Placeholder, replace with actual manipulation
     return manipulated_data
-
-
